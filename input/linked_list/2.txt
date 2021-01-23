@@ -1,0 +1,8 @@
+h 2
+c |2||x|
+i 1
+c |1|-|->|2|x|
+l 2 1
+c |1|-|->|2|-|->|1| ... Note the second 1 is actually the first 1.  This is a circular linked list.
+o
+p

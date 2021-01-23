@@ -1,0 +1,5 @@
+h 1
+c |1||x|
+d 1
+c linked list is now empty
+p 0 1

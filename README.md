@@ -26,6 +26,7 @@
 #### Stack
 
 You will find the input file for stack in `[PROJ_ROOT]/input/stack/[num].txt`.
+You will find the expected output file for stack in `[PROJ_ROOT]/expected/stack/[num].txt`.
 
 For each line in the input file for stack:
 
@@ -37,13 +38,15 @@ For each line in the input file for stack:
 #### Queue
 
 You will find the input file for queue in `[PROJ_ROOT]/input/queue/[num].txt`.
+You will find the expected output file for queue in `[PROJ_ROOT]/expected/queue/[num].txt`.
+
 
 For each line in the input file for queue:
 
 1. `c COMMENTS` All comments will begin with c.
 2. `q` Create an empty queue
-3. `e a` For line starting with u, enqueue a onto the existing queue. There will be only one `a` for each line starting with `u`.
-4. `d` For line starting with o, dequeue the value and write into output_file along with a new line.
+3. `e a` For line starting with e, enqueue a onto the existing queue. There will be only one `a` for each line starting with `u`.
+4. `d` For line starting with d, dequeue the value and write into output_file along with a new line.
 
 #### Linked List
 

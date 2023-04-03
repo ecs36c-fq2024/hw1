@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.10)
 # you can check cmake version on your os by typing 
 # ```cmake --version``` on the terminal (#1)
 
-project(hw2 VERSION 1.0.0)
+project(hw1 VERSION 1.1.0)
 # Project Name and Version (#2)
 
 add_subdirectory(src)

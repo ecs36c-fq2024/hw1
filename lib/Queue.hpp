@@ -9,7 +9,7 @@ template <typename T>
 class Queue
 {
 private:
-    LinkedList<T> llist;
+    LinkedList<T> _llist;
 
 public:
     Queue();

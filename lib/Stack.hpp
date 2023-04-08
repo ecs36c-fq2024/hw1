@@ -9,7 +9,7 @@ template <typename T>
 class Stack
 {
 private:
-    LinkedList<T> llist;
+    LinkedList<T> _llist;
 
 public:
     Stack();

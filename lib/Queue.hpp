@@ -1,3 +1,10 @@
+#ifndef QUEUE_HPP
+#define QUEUE_HPP
+
+// DO NOT CHANGE THIS FILE
+
+#include "LinkedList.hpp"
+
 template <typename T>
 class Queue
 {
@@ -10,3 +17,5 @@ public:
     void enqueue(T value);
     T dequeue();
 };
+
+#endif

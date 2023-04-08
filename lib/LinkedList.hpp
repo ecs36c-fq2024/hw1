@@ -1,12 +1,11 @@
+#ifndef LINKED_LIST_HPP
+#define LINKED_LIST_HPP
+
+// DO NOT CHANGE THIS FILE
+
 #include <cstddef>
 #include <vector>
-
-template <typename T>
-struct LinkedListNode
-{
-    T value;
-    LinkedListNode<T> *next;
-};
+#include "LinkedListNode.hpp"
 
 template <typename T>
 class LinkedList
@@ -68,3 +67,5 @@ public:
 
     ~LinkedList();
 };
+
+#endif

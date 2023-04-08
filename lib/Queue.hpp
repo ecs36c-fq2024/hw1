@@ -14,8 +14,9 @@ private:
 public:
     Queue();
     Queue(LinkedList<T> &&llist);
+    size_t size();
     void enqueue(T value);
-    T dequeue();
+    std::optional<T> dequeue();
 };
 
 #endif

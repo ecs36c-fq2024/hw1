@@ -4,6 +4,7 @@
 // DO NOT CHANGE THIS FILE
 
 #include <cstddef>
+#include <optional>
 #include <vector>
 #include "LinkedListNode.hpp"
 
@@ -54,8 +55,8 @@ public:
     LinkedListNode<T> *insertAfter(LinkedListNode<T> *node, T value);
 
     /// @brief remove the first element from the list
-    /// @return true if there was at least one element in the list; false otherwise
-    bool removeHead();
+    /// @return the removed element if there was at least one element in the list; std::nullopt otherwise
+    std::optional<T> removeHead();
 
     /// @brief removes the first occurrence of the given element if found
     /// @param value: the value to be removed

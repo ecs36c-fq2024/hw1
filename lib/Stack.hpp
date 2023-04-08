@@ -14,9 +14,10 @@ private:
 public:
     Stack();
     Stack(LinkedList<T> &&llist);
-    T top();
+    size_t size();
+    std::optional<T> top();
     void push(T value);
-    T pop();
+    std::optional<T> pop();
 };
 
 #endif

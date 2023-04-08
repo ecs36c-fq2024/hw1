@@ -1,3 +1,5 @@
+# DO NOT CHANGE THIS FILE
+
 cmake_minimum_required(VERSION 3.22)
 
 project(hw1 VERSION 2.0.0)

@@ -2,12 +2,15 @@
  * This file will not be included in the submission.
  * You can add more test cases here to improve test coverage.
  */
-#include <cassert>
-#include "LinkedList.cpp"
-#include "Queue.hpp"
-#include "Stack.hpp"
 
-void test_linked_list()
+#include <cassert>
+
+// Implementations for template classes must be included.
+#include "LinkedList.cpp"
+#include "Queue.cpp"
+#include "Stack.cpp"
+
+void testLinkedList()
 {
     LinkedList<int> llist;
 
@@ -30,7 +33,7 @@ void test_linked_list()
     assert(llist.tail()->value == 19);
     assert(llist.head()->next == llist.tail());
 
-    llist.prepend(13);
+    node = llist.prepend(13);
     assert(node == llist.head());
     assert(llist.size() == 3);
     assert(llist.head()->value == 13);
@@ -40,6 +43,6 @@ void test_linked_list()
 
 int main(int argc, char const *argv[])
 {
-    test_linked_list();
+    testLinkedList();
     return 0;
 }

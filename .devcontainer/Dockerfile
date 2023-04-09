@@ -1,2 +1,2 @@
-FROM mcr.microsoft.com/devcontainers/base:alpine-3.17
-RUN apk add --no-cache cmake gdb
+FROM mcr.microsoft.com/devcontainers/base:jammy
+RUN apt-get update && apt-get install -y cmake gdb

@@ -15,8 +15,8 @@ private:
 
     LinkedListNode<T> *_next;
 
-    explicit LinkedListNode(T value) : _value(value), _next(nullptr) {}
-    LinkedListNode(T value, LinkedListNode<T> *next) : _value(value), _next(next) {}
+    explicit LinkedListNode(T value) : value(value), _next(nullptr) {}
+    LinkedListNode(T value, LinkedListNode<T> *next) : value(value), _next(next) {}
 
 public:
     T value;

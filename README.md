@@ -1,115 +1,118 @@
 # Homework 1
 
-> Due: 04-23-2023 11:59:59 PM
+> Due: 05-07-2023 11:59:59 PM
 
-**Corresponding Topic**: Stacks, Queues, Linked Lists
+**Topics**: Templates, Linked Lists, Stacks, Queues
 
 ## Table of Contents
 
 - [Homework 1](#homework-1)
   - [Table of Contents](#table-of-contents)
-    - [Homework Content](#homework-content)
-      - [Stack](#stack)
-      - [Queue](#queue)
-      - [Linked List](#linked-list)
-    - [Homework Submission](#homework-submission)
-    - [Local Autograder](#local-autograder)
+  - [Homework Spec](#homework-spec)
+    - [Linked List](#linked-list)
+    - [Stack](#stack)
+    - [Queue](#queue)
+    - [Submission](#submission)
+  - [Setup](#setup)
 
-**IMPORTANT**: DO NOT CHANGE THE FILE MARKED WITH:
+> ⚠️ DO NOT change files marked with
+>
+> ```cpp
+> // DO NOT CHANGE THIS FILE
+> ```
 
-```cpp
-/*
- * DO NOT CHANGE THIS FILE!
- *
- */
-```
+## Homework Spec
 
-### Homework Content
+In this homework, you will write a template library that contains three data
+structures - `LinkedList`, `Stack`, and `Queue`.
 
-**You don't have to worry about edge cases other than described in each section.**
+You will implement `LinkedList` first and then implement `Stack` and `Queue`
+using the `LinkedList` you implemented.
 
-#### Stack
+> In reality, `Stack` and `Queue` can also be implemented using a
+> dynamically-sized array (such as `std::vector`), but not in this homework.
 
-You will find the input file for stack in `[PROJ_ROOT]/input/stack/[num].txt` .
-You will find the expected output file for stack in `[PROJ_ROOT]/expected/stack/[num].txt` .
+### Grading
 
-For each line in the input file for stack:
+You will be graded on test cases
 
-1. `c COMMENTS` All comments will begin with `c`.
-2. `s` Create an empty stack
-3. `u a` For line starting with u, push `a` onto the existing stack. There will be only one `a` for each line starting with `u`.
-4. `o` For line starting with `o`, pop the value and write into output_file along with a new line.
+- LinkedList - 60%
+- Stack - 15%
+- Queue - 15%
+- Memory Safety - 10%
 
-#### Queue
+### Linked List
 
-You will find the input file for queue in `[PROJ_ROOT]/input/queue/[num].txt` .
-You will find the expected output file for queue in `[PROJ_ROOT]/expected/queue/[num].txt` .
+TODO
 
-For each line in the input file for queue:
+### Stack
 
-1. `c COMMENTS` All comments will begin with c.
-2. `q` Create an empty queue
-3. `e a` For line starting with e, enqueue a onto the existing queue. There will be only one `a` for each line starting with `u`.
-4. `d` For line starting with d, dequeue the value and write into output_file along with a new line.
+TODO
 
-#### Linked List
+### Queue
 
-You will find the input file for linked list in `[PROJ_ROOT]/input/linked_list/[num].txt` .
-**IMPORTANT**: You can assume there will be no duplicate on the linked list. For example, if a node where `node.val = a` already exists. You can ignore the command that inserts another node into the linked list with `node.val = a` .
+TODO
 
-For each line in the input file for linked list:
+### Submission
 
-1. `c COMMENTS` All comments will begin with c.
-2. `h 0` Create a linked list `ll` such that `ll.head.val = 0` `h 0` will always be the first line in any input file. There will only be one h statement per input file.
-3. `i a` Insert node with `node.val = a` into the front of the linked list.
-4. `d a` Delete `node.val = a` from the linked list.  Ignore the command if such node doesn't exist.
-5. `r` Reverse the existing linked list. Do not print.
-6. `n a b` Create a new `node_b` with `node_b.val = b`, insert the new node after `node_a` where `node_a.val = a`.
-7. `l a b` Link `node_a` with `node_a.val = a` with `node_b` with `node_b.val = b`. Ignore the command if either node doesn't exist.
-8. `p i j` Print the linked list starting from [i, j), 0 indexed into the output file
-   Example: For linked list: 1 -> 2 -> 3 -> 4, `p 0 2` will print
+TODO
 
-   
+## Setup
 
-```txt
-1 2
-```
+Use one of the following options to set up your environment.
 
-`p` If p has no arguments, then it will print the entire linked list starting from head. If the linked list is a circular linked list, then only print each item once.
+> ⚠️ If you're a student, **DO NOT FORK** this repository because you cannot
+> change the visibility of a forked repo to private. If you plan to use Git for
+> version control (which is encouraged), run `rm -rf .git && git init` after
+> setting up using one of the options below and push to your **private**
+> repository. Any public repository containing part of this homework solution
+> will be reported to SJA.
 
-9. `o` print 1 into output file if the linked list is a circular linked list, 0 otherwise
+### Option 1: VS Code with Local Dev Container
 
-### Homework Submission
+- If Docker is not running, start Docker.
 
-run
+- Click the following button to set up the environment.
+
+  [![Setup Local Dev Container](https://img.shields.io/static/v1?label=Local%20Dev%20Container&message=Setup&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/ecs36c-sq2023/hw1)
+
+- When asked for selecting a Kit to configure CMake, choose **GCC**.
+
+### Option 2: VS Code with Remote Dev
+
+- Connect VS Code to the remote host.
+
+- Install **C/C++ Extension Pack** on Remote Server (if not already).
+
+- Run the following command inside the integrated terminal.
+
+  `git clone https://github.com/ecs36c-sq2023/hw1 ecs36c-hw1`
+
+- Run `code ./ecs36c-hw1` to open the folder.
+
+- When prompted to configure CMake, confirm and choose **GCC** when prompted for
+  kit selection.
+
+### Option 3: Terminal
+
+- Run the following commands
+
+  ```bash
+  git clone https://github.com/ecs36c-sq2023/hw1 ecs36c-hw1
+  cd ./ecs36c-hw1
+  mkdir build
+  cd build
+  cmake ..
+  ```
+
+## Run/Debug
+
+### Run tests using VS Code
+
+### Run tests using Terminal
 
 ```bash
-chmod +x generate_submission
-
-./generate_submission
-```
-
-The script `generate_submission` will create a zip file `hw2-submission.zip` .
-Please submit `hw2-submission.zip` to gradescope.
-
-This script will ignore all of the files marked with
-
-```cpp
-/*
- * DO NOT CHANGE THIS FILE!
- *
- */
-```
-
-### Local Autograder
-
-We will be providing the autograder script to help you gauge your results.
-run the following in the autograder environment provided in docker or any unix-* environment.
-The released scripts is aimed to help you compare your output with the expected output.
-For official scores, please refer to **gradescope**.
-
-```bash
-cd autograder
-+x grade.sh
-./grade.sh
+cd build
+make
+./run_tests
 ```

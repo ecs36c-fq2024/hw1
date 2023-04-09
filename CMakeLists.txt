@@ -1,18 +1,37 @@
-cmake_minimum_required(VERSION 3.10)
-# Defines the minimum required cmake version
-# you can check cmake version on your os by typing 
-# ```cmake --version``` on the terminal (#1)
+# DO NOT CHANGE THIS FILE
 
-project(hw1 VERSION 1.1.0)
-# Project Name and Version (#2)
+cmake_minimum_required(VERSION 3.22)
 
-add_subdirectory(src)
-# There is a src folder in the current directory
-# this runs the setting from src/CMakeLists.txt (#->)
+project(hw1 VERSION 2.0.0)
 
-add_executable(main main.cpp)
+set(CMAKE_CXX_STANDARD 17)
 
-target_link_libraries(main PUBLIC datastructure)
+include_directories(lib)
 
-# These commands link insertion_sort library to run_sort
-# Note run_sort is the target, and it will have the access to the include directory defined above in target_include_directories
+# The code below sets up GoogleTest
+# Reference: http://google.github.io/googletest/quickstart-cmake.html
+
+include(FetchContent)
+FetchContent_Declare(
+  googletest
+  URL https://github.com/google/googletest/archive/03597a01ee50ed33e9dfd640b249b4be3799d395.zip
+)
+# For Windows: Prevent overriding the parent project's compiler/linker settings
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+FetchContent_MakeAvailable(googletest)
+
+enable_testing()
+
+add_executable(
+  run_tests
+  tests/LinkedListTest.cpp
+  tests/StackTest.cpp
+  tests/QueueTest.cpp
+)
+target_link_libraries(
+  run_tests
+  GTest::gtest_main
+)
+
+include(GoogleTest)
+gtest_discover_tests(run_tests)

@@ -49,7 +49,8 @@ public:
     LinkedListNode<T> *append(T value);
 
     /// @brief insert a new element after the specified node
-    /// @param node: the node before the insertion position
+    /// @param node: the node before the insertion position.
+    /// If nullptr, the new element will be added to the beginning of the list.
     /// @param value: the value to be added
     /// @return the new node created containing the specified value
     LinkedListNode<T> *insertAfter(LinkedListNode<T> *node, T value);

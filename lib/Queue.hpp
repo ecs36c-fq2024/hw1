@@ -14,6 +14,7 @@ private:
 public:
     Queue();
     Queue(LinkedList<T> &&llist);
+    Queue(const std::vector<T> &items);
 
     /// @brief Returns the number of elements in the queue.
     /// @return The number of elements in the queue.

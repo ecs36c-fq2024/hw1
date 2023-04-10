@@ -30,7 +30,9 @@ public:
     /// @param other: the other list to be moved
     LinkedList(LinkedList<T> &&other);
 
-    explicit LinkedList(std::vector<T> items);
+    /// @brief create a new list from a vector
+    /// @param items: the vector whose values should be copied
+    explicit LinkedList(const std::vector<T> &items);
 
     /// @brief get the number of elements in the list
     /// @return the number of elements in the list

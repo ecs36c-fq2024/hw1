@@ -13,7 +13,7 @@ private:
 
 public:
     Stack();
-    Stack(LinkedList<T> &&llist);
+    Stack(const std::vector<T> &items);
 
     /// @brief Returns the number of elements in the stack.
     /// @return The number of elements in the stack.

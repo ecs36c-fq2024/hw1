@@ -9,11 +9,19 @@
 - [Homework 1](#homework-1)
   - [Table of Contents](#table-of-contents)
   - [Homework Spec](#homework-spec)
+    - [Grading](#grading)
     - [Linked List](#linked-list)
     - [Stack](#stack)
     - [Queue](#queue)
+    - [Memory Safety](#memory-safety)
     - [Submission](#submission)
   - [Setup](#setup)
+    - [Option 1: VS Code with Local Dev Container](#option-1-vs-code-with-local-dev-container)
+    - [Option 2: VS Code with Remote Dev](#option-2-vs-code-with-remote-dev)
+    - [Option 3: Terminal](#option-3-terminal)
+  - [Run/Debug](#rundebug)
+    - [Run tests using VS Code](#run-tests-using-vs-code)
+    - [Run tests using Terminal](#run-tests-using-terminal)
 
 > ⚠️ DO NOT change files marked with
 >
@@ -34,28 +42,59 @@ using the `LinkedList` you implemented.
 
 ### Grading
 
-You will be graded on test cases
+You will be graded only on the same (hidden) test cases your TAs created.
 
-- LinkedList - 60%
-- Stack - 15%
-- Queue - 15%
+We provided some tests cases in [./tests](./tests). Feel free to modify and add
+more test cases, but the [./tests](./tests) in your submission will not be
+graded. However, you will be able to see the results for your submitted test
+cases on Gradescope.
+
+- `LinkedList` Implementation - 60%
+- `Stack` Implementation - 15%
+- `Queue` Implementation - 15%
 - Memory Safety - 10%
 
 ### Linked List
 
-TODO
+- Check the definition for `LinkedListNode` in
+  [lib/LinkedListNode.hpp](lib/LinkedListNode.hpp).
+
+- Check the spec in [lib/LinkedList.hpp](lib/LinkedList.hpp) and implement all
+  methods in [lib/LinkedList.cpp](lib/LinkedList.cpp).
+
+- Create test cases in [tests/LinkedListTest.cpp](tests/LinkedListTest.cpp).
 
 ### Stack
 
-TODO
+- Check the spec in [lib/Stack.hpp](lib/Stack.hpp) and implement all methods in
+  [lib/Stack.cpp](lib/Stack.cpp).
+
+- Create test cases in [tests/StackTest.cpp](tests/StackTest.cpp).
 
 ### Queue
 
-TODO
+- Check the spec in [lib/Queue.hpp](lib/Queue.hpp) and implement all methods in
+  [lib/Queue.cpp](lib/Queue.cpp).
+
+- Create test cases in [tests/QueueTest.cpp](tests/QueueTest.cpp).
+
+### Memory Safety
+
+We will run `valgrind --leek-check=full ./build/run_tests` against the hidden
+test cases to check whether there is memory safety issues.
+
+If your test cases are not comprehensive, `valgrind` may not be able to report
+potential memory safety issues when you run it against your test cases.
+
+If you do not fully implement the data structures, your score for memory safety
+will be automatically discounted even if `valgrind` does not report error(s).
+
+(For example, if you implement nothing, there will of course be no memory safety
+issues, but you will receive a 0 on memory safety score).
 
 ### Submission
 
-TODO
+Use `./generate_submission.sh` and submit `hw1-submission.zip` on Gradescope.
 
 ## Setup
 
@@ -108,6 +147,8 @@ Use one of the following options to set up your environment.
 ## Run/Debug
 
 ### Run tests using VS Code
+
+Directly Launch.
 
 ### Run tests using Terminal
 

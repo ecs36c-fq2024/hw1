@@ -14,9 +14,21 @@ private:
 public:
     Stack();
     Stack(LinkedList<T> &&llist);
-    size_t size();
-    std::optional<T> top();
+
+    /// @brief Returns the number of elements in the stack.
+    /// @return The number of elements in the stack.
+    size_t size() const;
+
+    /// @brief Returns the top element of the stack.
+    /// @return The value of the top element, or `std::nullopt` if the stack is empty.
+    std::optional<T> top() const;
+
+    /// @brief Adds an element to the top of the stack.
+    /// @param value: the value to be added
     void push(T value);
+
+    /// @brief Removes the top element from the stack and returns that element.
+    /// @return The value of the popped element, or `std::nullopt` if the stack is empty.
     std::optional<T> pop();
 };
 

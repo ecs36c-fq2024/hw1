@@ -23,20 +23,20 @@ public:
 
     /// @brief get the number of elements in the list
     /// @return the number of elements in the list
-    size_t size();
+    size_t size() const;
 
     /// @brief get the head node
     /// @return the head node of the list if the list is not empty; nullptr otherwise
-    LinkedListNode<T> *head();
+    LinkedListNode<T> *head() const;
 
     /// @brief get the tail node
     /// @return the tail node of the list if the list is not empty; nullptr otherwise
-    LinkedListNode<T> *tail();
+    LinkedListNode<T> *tail() const;
 
     /// @brief find the first occurrence of the specified value in the list
     /// @param value: the value we are trying to find
     /// @return the node that contains the value specified if exists; nullptr otherwise
-    LinkedListNode<T> *find(T value);
+    LinkedListNode<T> *find(T value) const;
 
     /// @brief add a new element to the beginning of the list
     /// @param value: the value to be added

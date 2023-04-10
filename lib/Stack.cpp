@@ -4,10 +4,7 @@
 #include "Stack.hpp"
 
 template <typename T>
-Stack<T>::Stack(LinkedList<T> &&llist) : _llist(std::move(llist)) {}
-
-template <typename T>
-Stack<T>::Stack() : Stack(LinkedList<T>()) {}
+Stack<T>::Stack() {}
 
 // TODO: Implement all other methods defined in Stack.hpp here
 

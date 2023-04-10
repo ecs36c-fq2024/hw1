@@ -3,7 +3,8 @@
 
 // TODO: Uncomment the following test
 
-// TEST(QueueTest, InstantiateEmptyQueue) {
+// TEST(QueueTest, InstantiateEmptyQueue)
+// {
 //     Queue<int> queue;
 //     ASSERT_EQ(queue.size(), 0);
 // }

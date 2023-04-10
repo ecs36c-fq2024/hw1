@@ -42,11 +42,11 @@ using the `LinkedList` you implemented.
 
 ### Grading
 
-You will be graded only on the same (hidden) test cases your TAs created.
+You will all be graded only on the same (hidden) test cases your TAs created.
 
-We provided some tests cases in [./tests](./tests). Feel free to modify and add
+We provided some test cases in [./tests](./tests). Feel free to modify and add
 more test cases, but the [./tests](./tests) in your submission will not be
-graded. However, you will be able to see the results for your submitted test
+graded. However, you will be able to see the results of your submitted test
 cases on Gradescope.
 
 - `LinkedList` Implementation - 60%
@@ -54,9 +54,9 @@ cases on Gradescope.
 - `Queue` Implementation - 15%
 - Memory Safety - 10%
 
-**NOTE** If you are running out of time to implement all methods, please
-at least provide a syntactically valid empty method definition for each 
-method in `lib/*.cpp`.
+> **NOTE:** If you are running out of time to implement all methods, please at
+> least provide a syntactically valid empty method definition for each method in
+> `lib/*.cpp` to make autograders' test cases compile.
 
 ### Linked List
 
@@ -85,10 +85,10 @@ method in `lib/*.cpp`.
 ### Memory Safety
 
 We will run `valgrind --leek-check=full ./build/run_tests` against the hidden
-test cases to check whether there is memory safety issues.
+test cases to check whether there is any memory safety issue.
 
 If your test cases are not comprehensive, `valgrind` may not be able to report
-potential memory safety issues when you run it against your test cases.
+potential memory safety issues when you run against your test cases.
 
 If you do not fully implement the data structures, your score for memory safety
 will be automatically discounted even if `valgrind` does not report error(s).

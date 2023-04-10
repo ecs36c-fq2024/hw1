@@ -3,6 +3,12 @@
 
 #include "Queue.hpp"
 
-// TODO: Implement all methods defined in Queue.hpp here
+template <typename T>
+Queue<T>::Queue(LinkedList<T> &&llist) : _llist(std::move(llist)) {}
+
+template <typename T>
+Queue<T>::Queue() : Queue(LinkedList<T>()) {}
+
+// TODO: Implement all other methods defined in Queue.hpp here
 
 #endif

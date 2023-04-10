@@ -17,7 +17,18 @@ private:
     LinkedListNode<T> *_tail;
 
 public:
+    /// @brief create a new empty list
     LinkedList();
+
+    /// @brief copy constructor
+    /// @param other: the other list to be copied
+    /// @note the default copy constructor is deleted because it will only copy shallowly
+    /// and may result in two inter-dependent lists.
+    LinkedList(const LinkedList<T> &other) = delete;
+
+    /// @brief move constructor
+    /// @param other: the other list to be moved
+    LinkedList(LinkedList<T> &&other);
 
     explicit LinkedList(std::vector<T> items);
 

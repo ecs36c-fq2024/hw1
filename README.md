@@ -84,7 +84,7 @@ cases on Gradescope.
 
 ### Memory Safety
 
-We will run `valgrind --leek-check=full ./build/run_tests` against the hidden
+We will run `valgrind --leak-check=full ./build/run_tests` against the hidden
 test cases to check whether there is any memory safety issue.
 
 If your test cases are not comprehensive, `valgrind` may not be able to report

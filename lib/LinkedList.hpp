@@ -69,7 +69,7 @@ public:
     LinkedListNode<T> *insertAfter(LinkedListNode<T> *node, T value);
 
     /// @brief remove the first element from the list
-    /// @return the removed element if there was at least one element in the list; std::nullopt otherwise
+    /// @return the value of removed element if there was at least one element in the list; std::nullopt otherwise
     std::optional<T> removeHead();
 
     /// @brief removes the first occurrence of the given element if found

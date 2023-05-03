@@ -13,6 +13,8 @@ private:
 
 public:
     Stack();
+    
+    /// @brief push the items into the stack sequentially, where end of items is the top
     Stack(const std::vector<T> &items);
 
     /// @brief Returns the number of elements in the stack.

@@ -1,2 +1,5 @@
 build
 *.zip
+
+.vscode
+!.vscode/launch.json

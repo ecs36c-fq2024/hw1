@@ -1,6 +1,6 @@
 # Homework 1
 
-> Due: TBD
+> Due: October 22th, 2023 11:59 PM
 
 **Topics**: Templates, Linked Lists, Stacks, Queues
 

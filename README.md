@@ -22,6 +22,7 @@
   - [Run/Debug](#rundebug)
     - [Run tests using VS Code](#run-tests-using-vs-code)
     - [Run tests using Terminal](#run-tests-using-terminal)
+    - [Run on Apple Silicon Devices](#run-on-apple-silicon-devices)
 
 > ⚠️ DO NOT change files marked with
 >
@@ -161,3 +162,23 @@ cd build
 make
 ./run_tests
 ```
+
+### Run on Apple Silicon Devices
+
+We recommend using *Dev Container*.
+However, if you want to run/debug your code locally,
+you have to use the [clang](https://clang.llvm.org/) compiler since gcc is not available.
+In this case, please change `"MIMode": "gdb"` to `"MIMode": "lldb"` in `.vscode/launch.json`.
+
+To be specific:
+
+```json
+{
+      // If you're running natively on Apple Silicon Mac (without dev container),
+      // change this to "lldb". No action is required when running in dev container.
+      "MIMode": "lldb",
+}
+```
+
+**NOTE**: our autograder uses `gcc` to compile the homework. 
+You have to make sure your code can be compiled by `gcc`.
